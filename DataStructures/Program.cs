@@ -15,6 +15,7 @@ namespace DataStructures
             Console.WriteLine("2. Linked List");
             Console.WriteLine("3. Stack and Queues");
             Console.WriteLine("4. Trees");
+            Console.WriteLine("5. Graphs and Hash");
 
             Console.Write("\nEnter your choice : ");
             int choice = int.Parse(Console.ReadLine());
@@ -82,6 +83,19 @@ namespace DataStructures
 
                     Console.Write("In-order Traversal of the Binary Tree : ");
                     tree.InOrderTraversal();
+                    break;
+                case 5:
+                    Console.WriteLine("\n***Graphs and Hash***\n");
+                    Graph graph = new Graph();
+                    graph.AddEdge(1, 2);
+                    graph.AddEdge(1, 3);
+                    graph.AddEdge(2, 4);
+                    graph.AddEdge(2, 5);
+                    graph.AddEdge(3, 6);
+                    graph.AddEdge(4, 7);
+
+                    int reachableCount = graph.CountReachableNodes(1);
+                    Console.WriteLine($"Number of reachable nodes from node 1: {reachableCount}");
                     break;
 
                 default:
