@@ -176,8 +176,48 @@ namespace DataStructures
             }
         }
     }
+    class Graph // connected to case # 5
+    {
+        private Dictionary<int, List<int>> adjacencyList;
 
+        public Graph()
+        {
+            adjacencyList = new Dictionary<int, List<int>>();
+        }
+        public void AddEdge(int source, int destination)
+        {
+            if (!adjacencyList.ContainsKey(source))
+            {
+                adjacencyList[source] = new List<int>();
+            }
+            adjacencyList[source].Add(destination);
+        }
+        public int CountReachableNodes(int start)
+        {
+            HashSet<int> visited = new HashSet<int>();
+            Queue<int> queue = new Queue<int>();
+            queue.Enqueue(start);
+            visited.Add(start);
+            int count = 0;
 
+            while (queue.Count > 0)
+            {
+                int node = queue.Dequeue();
+                count++; 
 
-
+                if (adjacencyList.ContainsKey(node))
+                {
+                    foreach (var neighbor in adjacencyList[node])
+                    {
+                        if (!visited.Contains(neighbor))
+                        {
+                            visited.Add(neighbor);
+                            queue.Enqueue(neighbor);
+                        }
+                    }
+                }
+            }
+            return count; 
+        }
+    }
 }
