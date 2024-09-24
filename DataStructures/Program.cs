@@ -14,6 +14,7 @@ namespace DataStructures
             Console.WriteLine("1. Introduction to Classes and Objects (Part 1 and Part 2)");
             Console.WriteLine("2. Linked List");
             Console.WriteLine("3. Stack and Queues");
+            Console.WriteLine("4. Trees");
 
             Console.Write("\nEnter your choice : ");
             int choice = int.Parse(Console.ReadLine());
@@ -36,7 +37,6 @@ namespace DataStructures
                     break;
                 case 2:
                     Console.WriteLine("\n***Linked List Operations***\n");
-
                     Node head = new Node(2);
                     Node second = new Node(4);
                     Node third = new Node(6);
@@ -53,15 +53,42 @@ namespace DataStructures
                     Console.WriteLine("Number of nodes in the linked list: " + nodeCount);
                     break;
                 case 3:
+                    Console.WriteLine("\n***Stack and Queues***\n");
+                    StackAndQueues sq = new StackAndQueues();
+                    Console.WriteLine("Enter a string to check if it is a Palindrome : ");
+                    string input = Console.ReadLine();
 
+                    bool result = sq.isPalindrome(input);
+                    if (result)
+                    {
+                        Console.WriteLine($"\"{input}\" is a palindrome.");
+                    }
+                    else
+                    {
+                        Console.WriteLine($"\"{input}\" is not a palindrome.");
+                    }
+                    break;
+                case 4:
+                    Console.WriteLine("\n***Trees***\n");
+                    BinaryTree tree = new BinaryTree();
 
+                    tree.Insert(5);
+                    tree.Insert(3);
+                    tree.Insert(7);
+                    tree.Insert(2);
+                    tree.Insert(4);
+                    tree.Insert(6);
+                    tree.Insert(8);
+
+                    Console.Write("In-order Traversal of the Binary Tree : ");
+                    tree.InOrderTraversal();
                     break;
 
                 default:
                     Console.WriteLine("Invalid choice.");
                     break;
             }
-            Console.WriteLine("Press any key to exit...");
+            Console.WriteLine("\n\nPress any key to exit...");
             Console.ReadKey();
         }
     }
