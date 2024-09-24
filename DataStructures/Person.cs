@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace DataStructures
 {
@@ -77,6 +78,102 @@ namespace DataStructures
                 current = current.next;
             }
             Console.WriteLine();
+        }
+    }
+    class StackAndQueues //connected to case # 3
+    {
+        public bool isPalindrome(string input)
+        {
+            Stack<char> stack = new Stack<char> ();
+            Queue<char> queue = new Queue<char> ();
+
+            string normalizeInput = Normalize(input);
+            foreach (char c in normalizeInput)
+            {
+                stack.Push (c);
+                queue.Enqueue (c);
+            } while (stack.Count > 0 && queue.Count > 0)
+            {
+                if (stack.Pop() != queue.Dequeue())
+                {
+                    return false;
+                }
+            }
+            return true;
+        }
+        private string Normalize(string input)
+        {
+            char[] arr = input.ToLower().ToCharArray();
+            List<char> convertToLowerCaselist = new List<char>();
+
+            foreach(char c in arr)
+            {
+                if (char.IsLetterOrDigit(c))
+                {
+                    convertToLowerCaselist.Add(c);
+                }
+            }
+            return new string (convertToLowerCaselist.ToArray());
+        }
+    }
+    class TreeNode //connected to case # 4
+    {
+        public int Value;
+        public TreeNode Left;
+        public TreeNode Right;
+
+        public TreeNode(int value)
+        {
+            Value = value;
+            Left = null;
+            Right = null;
+        }
+    }
+    class BinaryTree //connected to case # 4
+    {
+        private TreeNode root;
+
+        public BinaryTree()
+        {
+            root = null;
+        }
+        public void Insert(int value)
+        {
+            root = InsertRec(root, value);
+        }
+
+        private TreeNode InsertRec(TreeNode node, int value)
+        {
+
+            if (node == null)
+            {
+                return new TreeNode(value);
+            }
+
+            if (value < node.Value)
+            {
+                node.Left = InsertRec(node.Left, value);
+            }
+            else
+            {
+                node.Right = InsertRec(node.Right, value);
+            }
+
+            return node;
+        }
+        public void InOrderTraversal()
+        {
+            InOrderRec(root);
+        }
+
+        private void InOrderRec(TreeNode node)
+        {
+            if (node != null)
+            {
+                InOrderRec(node.Left);    
+                Console.Write(node.Value + " "); 
+                InOrderRec(node.Right); 
+            }
         }
     }
 
