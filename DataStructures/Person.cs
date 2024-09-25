@@ -34,11 +34,12 @@ namespace DataStructures
         public bool isBarking;
         public Person personOwned;
 
-        public Dog(string dogname, string color, bool isBarking)
+        public Dog(string dogname, string color, bool isBarking, Person personOwned)
         {
             this.dogname = dogname;
             this.color = color;
             this.isBarking = isBarking;
+            this.personOwned = personOwned;
         }
         public void barkingWhileSittingDown()
         {
