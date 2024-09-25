@@ -15,7 +15,8 @@ namespace DataStructures
             Console.WriteLine("2. Linked List");
             Console.WriteLine("3. Stack and Queues");
             Console.WriteLine("4. Trees");
-            Console.WriteLine("5. Graphs and Hash");
+            Console.WriteLine("5. Graphs");
+            Console.WriteLine("6. Hashing");
 
             Console.Write("\nEnter your choice : ");
             int choice = int.Parse(Console.ReadLine());
@@ -97,7 +98,9 @@ namespace DataStructures
                     int reachableCount = graph.CountReachableNodes(1);
                     Console.WriteLine($"Number of reachable nodes from node 1: {reachableCount}");
                     break;
-
+                case 6:
+                    Hashing.HashTablesAndDict();
+                    break;
                 default:
                     Console.WriteLine("Invalid choice.");
                     break;
