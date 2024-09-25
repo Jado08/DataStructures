@@ -26,13 +26,13 @@ namespace DataStructures
                 case 1:
                     Console.WriteLine("\n***Introduction to Classes and Objects (Part 1 and Part 2)***\n");
                     Person ce = new Person("Emmanuel", 24, "Matina Aplaya");
-                    Dog l = new Dog("Loki", "Black", false);
+                    Dog l = new Dog("Loki", "Black", false, ce);
                     ce.dog = l;
                     l.barkingWhileStandingUp();
                     ce.selfIntroduce();
-
+                    Console.WriteLine();
                     Person ra = new Person("Russell Ann", 24, "Catalunan Pequino");
-                    Dog m = new Dog("Moshi", "White", true);
+                    Dog m = new Dog("Moshi", "White", true, ra);
                     ra.dog = m;
                     m.barkingWhileSittingDown();
                     ra.selfIntroduce();
