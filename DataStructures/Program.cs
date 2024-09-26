@@ -17,6 +17,8 @@ namespace DataStructures
             Console.WriteLine("4. Trees");
             Console.WriteLine("5. Graphs");
             Console.WriteLine("6. Hashing");
+            Console.WriteLine("7. Heap");
+            Console.WriteLine("8. Sorting Algorithms");
 
             Console.Write("\nEnter your choice : ");
             int choice = int.Parse(Console.ReadLine());
@@ -99,7 +101,16 @@ namespace DataStructures
                     Console.WriteLine($"Number of reachable nodes from node 1: {reachableCount}");
                     break;
                 case 6:
+                    Console.WriteLine("\n***Hash***\n");
                     Hashing.HashTablesAndDict();
+                    break;
+                case 7:
+                    Console.WriteLine("\n***Heaps***\n");
+                    Heap.Heaps();
+                    break;
+                case 8:
+                    Console.WriteLine("\n***Sorting Algorithm***\n");
+                    SortingAlgorithm.AllSorting();
                     break;
                 default:
                     Console.WriteLine("Invalid choice.");
