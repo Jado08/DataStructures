@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace DataStructures
 {
-    internal class Person //connected to case #1
+    internal class Person //connected to case # 1
     {
         public string name;
         public int age;
