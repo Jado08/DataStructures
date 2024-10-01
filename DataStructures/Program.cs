@@ -21,6 +21,7 @@ namespace DataStructures
             Console.WriteLine("8. Sorting Algorithms");
             Console.WriteLine("9. Searching Algorithms");
             Console.WriteLine("10. Greedy Algorithms");
+            Console.WriteLine("11. Divide and Conquer");
 
 
             Console.Write("\nEnter your choice : ");
@@ -122,6 +123,10 @@ namespace DataStructures
                 case 10:
                     Console.WriteLine("\n***Greedy Algorithm***\n");
                     GreedyAlgo.PracticeGreedyAlgo();
+                    break;
+                case 11:
+                    Console.WriteLine("\n***Divide and Conquer***\n");
+                    DivideAndConquer.MaxArray();
                     break;
                 default:
                     Console.WriteLine("Invalid choice.");
