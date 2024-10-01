@@ -19,6 +19,7 @@ namespace DataStructures
             Console.WriteLine("6. Hashing");
             Console.WriteLine("7. Heap");
             Console.WriteLine("8. Sorting Algorithms");
+            Console.WriteLine("9. Searching Algorithms");
 
             Console.Write("\nEnter your choice : ");
             int choice = int.Parse(Console.ReadLine());
@@ -111,6 +112,10 @@ namespace DataStructures
                 case 8:
                     Console.WriteLine("\n***Sorting Algorithm***\n");
                     SortingAlgorithm.AllSorting();
+                    break;
+                case 9:
+                    Console.WriteLine("\n***Searching Algorithm***\n");
+                    SearchingAlgorithm.AllSearching();
                     break;
                 default:
                     Console.WriteLine("Invalid choice.");
