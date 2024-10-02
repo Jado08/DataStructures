@@ -45,6 +45,7 @@
   <ItemGroup>
     <Compile Include="Backtracking.cs" />
     <Compile Include="DivideAndConquer.cs" />
+    <Compile Include="Fibonacci.cs" />
     <Compile Include="GreedyAlgo.cs" />
     <Compile Include="Hashing.cs" />
     <Compile Include="MinHeap.cs" />
