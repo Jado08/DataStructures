@@ -23,6 +23,7 @@ namespace DataStructures
             Console.WriteLine("10. Greedy Algorithms");
             Console.WriteLine("11. Divide and Conquer");
             Console.WriteLine("12. Backtracking");
+            Console.WriteLine("13. Space and Time Complexity Analysis");
 
 
             Console.Write("\nEnter your choice : ");
@@ -132,6 +133,10 @@ namespace DataStructures
                 case 12:
                     Console.WriteLine("\n***Backtracking***\n");
                     Backtracking.AllPermutations();
+                    break;
+                case 13:
+                    Console.WriteLine("\n***Time Complexity Analysis***\n");
+                    Fibonacci.FibonacciApplication();
                     break;
                 default:
                     Console.WriteLine("Invalid choice.");
